@@ -3,7 +3,7 @@ import math
 import matplotlib.pyplot as plt
 from random import random
 
-
+print("booooo")
 def profit_simple_bidding(p_1, p_2, b=0.4, c_v=0.2, c_s=0.5):
     if p_1 >= b:
         if p_2 >= b:
@@ -145,8 +145,9 @@ def print_progress_bar(current, delta, target=1):
 
 
 def show_multipart():
-    bs, xs, ys, b_v, b_s, delta = [], [], [], 0, 0, 0.01
+    bs, xs, ys, b_v, b_s, delta = [], [], [], 0, 0, 0.05
     while b_v < 1:
+        print(b_v)
         while b_s < 1:
             bs.append(eval_b_2((b_s, b_v), profit_func=profit_multipart_bidding))
             ys.append(b_s)
@@ -249,7 +250,7 @@ def eval_b_2_show(b, distribution=step_wise_distribution, profit_func=profit_sim
     return summa / point_number
 
 
-show_error(0.0005, hand_block, "step_wise_distribution", start_b=0, max_b=2)
+"""show_error(0.0005, hand_block, "step_wise_distribution", start_b=0, max_b=2)
 show_error(0.05, hand_block, "step_wise_distribution", start_b=0, max_b=2)
 show_error(0.01, hand_block, "step_wise_distribution", start_b=0, max_b=2)
 show_error(0.005, hand_block, "step_wise_distribution", start_b=0, max_b=2)
@@ -266,8 +267,8 @@ show()
 cscv = [(0.2, 0.5), (0.5, 0.5), (0.8, 0.5), (0.2, 0.2), (0.2, 0.5), (0.2, 0.2), (0.2, 0.5)]
 for vs in cscv:
     b_optimal_for_step_simple(vs[0], vs[1])
-    show(c_v=vs[0], c_s=vs[1])
-# show_multipart()
+    show(c_v=vs[0], c_s=vs[1])"""
+show_multipart()
 
 
 """
